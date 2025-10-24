@@ -1,141 +1,220 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# 🏥 المجمع الطبي الحديث - نظام الإدارة المتكامل
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+نظام إدارة متكامل للمجمعات الطبية باستخدام Laravel (Backend) و Next.js (Frontend)، مع التركيز على الأمان والأداء وسهولة الاستخدام.
 
-## ✨ Technology Stack
+## ✨ المميزات الرئيسية
 
-This scaffold provides a robust foundation built with:
+### 🔐 نظام المستخدمين
+- **3 أدوار**: مدير، طبيب، موظف استقبال
+- صلاحيات متقدمة وحماية متعددة الطبقات
+- تسجيل نشاط المستخدمين
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+### 📅 إدارة المواعيد
+- حجز وتأكيد المواعيد
+- قائمة انتظار تفاعلية
+- تقويم متكامل
+- إشعارات تلقائية
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+### 👥 إدارة المرضى
+- سجل شامل للمرضى
+- بحث متقدم
+- تاريخ طبي كامل
+- ملفات شخصية آمنة
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
+### 🩺 السجلات الطبية
+- تشخيص وتشخيصات
+- خطة علاج متكاملة
+- علامات حيوية
+- ملاحظات الأطباء
 
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Axios** - Promise-based HTTP client
+### 💊 الوصفات الطبية
+- إنشاء وإدارة الوصفات
+- طباعة وتصدير
+- تتبع الأدوية
 
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
+### 💰 الفواتير والمدفوعات
+- إنشاء تلقائي للفواتير
+- طرق دفع متعددة
+- تقارير مالية
 
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
+### 📊 التقارير المتقدمة
+- رسوم بيانية تفاعلية (Recharts)
+- إحصائيات شاملة
+- تقارير مخصصة
 
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
+### ⚙️ الإعدادات النظام
+- إعدادات عامة
+- إشعارات
+- أمان وحماية
+- نسخ احتياطي
 
-## 🎯 Why This Scaffold?
+## 🛠️ التقنيات المستخدمة
 
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
+### Backend
+- **Laravel 12.9.0** - إطار العمل الرئيسي
+- **SQLite** - قاعدة البيانات
+- **Prisma ORM** - إدارة قاعدة البيانات
+- **NextAuth.js** - المصادقة
 
-## 🚀 Quick Start
+### Frontend
+- **Next.js 15** - إطار العمل الحديث
+- **React 19.2.0** - مكتبة الواجهة
+- **Inertia.js 2.0.10** - التنقل السلس
+- **Tailwind CSS 4** - التصميم
+- **shadcn/ui** - المكونات الجاهزة
+
+### الاختبارات
+- **PHPUnit** - اختبارات Feature و Unit
+
+## 📦 التثبيت والتشغيل
+
+### المتطلبات
+- PHP 8.2+
+- Node.js 18+
+- Composer
+- npm/yarn
+
+### تثبيت Backend
+```bash
+cd medical-center
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+php artisan serve
+```
+
+### تثبيت Frontend
+```bash
+cd medical-center-m
+npm install
+npm run dev
+```
+
+## 🔐 معلومات الدخول الافتراضية
+
+### مدير النظام
+- **البريد**: admin@medical.com
+- **كلمة المرور**: password
+
+### طبيب
+- **البريد**: doctor@medical.com
+- **كلمة المرور**: password
+
+### موظف استقبال
+- **البريد**: reception@medical.com
+- **كلمة المرور**: password
+
+## 🏗️ بنية المشروع
+
+```
+medical-center-management-system/
+├── medical-center/          # Laravel Backend
+│   ├── app/
+│   │   ├── Http/Controllers/
+│   │   ├── Models/
+│   │   ├── Services/
+│   │   └── Policies/
+│   ├── database/
+│   │   ├── migrations/
+│   │   └── seeders/
+│   └── resources/
+│       └── js/
+│           ├── Components/
+│           ├── Layouts/
+│           └── Pages/
+└── medical-center-m/        # Next.js Frontend
+    ├── src/
+    │   ├── app/
+    │   ├── components/
+    │   └── lib/
+    └── public/
+```
+
+## 📊 قاعدة البيانات
+
+### الجداول الرئيسية
+- **users** - المستخدمين
+- **patients** - المرضى
+- **doctors** - الأطباء
+- **appointments** - المواعيد
+- **medical_records** - السجلات الطبية
+- **prescriptions** - الوصفات الطبية
+- **invoices** - الفواتير
+- **payments** - المدفوعات
+- **activity_logs** - سجل النشاط
+
+## 🔒 الأمان والحماية
+
+- حماية من CSRF, XSS, SQL Injection
+- إدارة جلسات آمنة
+- صلاحيات متقدمة
+- تسجيل نشاط المستخدمين
+- تحقق من حالة المستخدم
+
+## 🌐 دعم اللغة
+
+- دعم عربي كامل (RTL)
+- واجهة مستخدم متجاوبة
+- تصميم عصري
+
+## 📱 التوافق
+
+- متوافق مع جميع الأجهزة
+- تصميم متجاوب
+- دعم المتصفحات الحديثة
+
+## 🧪 الاختبارات
 
 ```bash
-# Install dependencies
-npm install
+# تشغيل اختبارات Feature
+php artisan test --testsuite=Feature
 
-# Start development server
-npm run dev
+# تشغيل اختبارات Unit
+php artisan test --testsuite=Unit
 
-# Build for production
-npm run build
-
-# Start production server
-npm start
+# تشغيل جميع الاختبارات
+php artisan test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+## 📝 التوثيق
 
-## 🤖 Powered by Z.ai
+- توثيق كامل للكود
+- تعليقات مفصلة
+- دليل استخدام
 
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
+## 🚀 النشر
 
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
-
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
-
-## 📁 Project Structure
-
-```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
+### باستخدام Docker
+```bash
+docker-compose up -d
 ```
 
-## 🎨 Available Features & Components
+### يدوياً
+1. إعداد الخادم
+2. تثبيت المتطلبات
+3. رفع الملفات
+4. إعداد قاعدة البيانات
+5. تشغيل الأوامر
 
-This scaffold includes a comprehensive set of modern web development tools:
+## 🤝 المساهمة
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
+1. Fork المشروع
+2. إنشاء فرع جديد
+3. إجراء التغييرات
+4. رفع Pull Request
 
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
+## 📄 الرخصة
 
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
+هذا المشروع مرخص تحت رخصة MIT.
 
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Axios + TanStack Query
-- **State Management**: Simple and scalable with Zustand
+## 📞 التواصل
 
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
-
-## 🤝 Get Started with Z.ai
-
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+لأي استفسار أو دعم، يرجى التواصل عبر:
+- البريد الإلكتروني: info@medical-center.com
+- GitHub: Issues
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+**🏆 تم التطوير بنجاح - نظام طبي متكامل وجاهز للاستخدام**
