@@ -66,6 +66,11 @@ class Doctor extends Model
         return $this->hasMany(Schedule::class);
     }
 
+    public function invoices(): HasMany
+    {
+        return $this->hasMany(Invoice::class);
+    }
+
     public function scopeAvailable($query)
     {
         return $query->where('is_available', true);

@@ -47,6 +47,16 @@ class Patient extends Model
         return $this->hasMany(Prescription::class);
     }
 
+    public function invoices(): HasMany
+    {
+        return $this->hasMany(Invoice::class);
+    }
+
+    public function payments(): HasMany
+    {
+        return $this->hasMany(Payment::class);
+    }
+
     public function scopeActive($query)
     {
         return $query->where('status', 'active');

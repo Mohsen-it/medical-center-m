@@ -37,6 +37,26 @@ class User extends Authenticatable
         return $this->hasOne(Doctor::class);
     }
 
+    public function profile(): HasOne
+    {
+        return $this->hasOne(UserProfile::class);
+    }
+
+    public function notifications()
+    {
+        return $this->morphMany(Notification::class, 'notifiable');
+    }
+
+    public function activityLogs()
+    {
+        return $this->hasMany(ActivityLog::class);
+    }
+
+    public function unreadNotifications()
+    {
+        return $this->morphMany(Notification::class, 'notifiable')->whereNull('read_at');
+    }
+
     public function isAdmin(): bool
     {
         return $this->role_type === 'admin';

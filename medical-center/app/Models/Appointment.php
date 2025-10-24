@@ -61,6 +61,11 @@ class Appointment extends Model
         return $this->belongsTo(MedicalRecord::class);
     }
 
+    public function invoice(): BelongsTo
+    {
+        return $this->belongsTo(Invoice::class);
+    }
+
     public function scopeToday($query)
     {
         return $query->whereDate('appointment_date', today());
